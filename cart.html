@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cart - Nebula Market</title>
+  <link rel="stylesheet" href="/css/reset.css">
+  <link rel="stylesheet" href="/css/styles.css">
+  <link rel="stylesheet" href="/css/header.css">
+  <link rel="stylesheet" href="/css/cart.css">
+  <link rel="stylesheet" href="/css/animations.css">
+  <link rel="stylesheet" href="/css/footer.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Roboto+Mono:wght@300;400;600&display=swap">
+</head>
+<body>
+  <div class="encryption-overlay">
+    <div class="encryption-text">Establishing Secure Connection...</div>
+  </div>
+
+  <header class="site-header">
+    <div class="header-container">
+      <div class="logo">
+        <h1><span class="logo-nebula">NEBULA</span> <span class="logo-market">MARKET</span></h1>
+        <div class="logo-tagline">Secure • Anonymous • Untraceable</div>
+      </div>
+      <div class="status-indicator">
+        <span class="status-dot online"></span>
+        <span class="status-text">SECURE CONNECTION</span>
+      </div>
+      <nav class="main-nav">
+        <ul>
+          <li><a href="index.html">Marketplace</a></li>
+          <li><a href="vendors.html">Vendors</a></li>
+          <li><a href="forum.html">Forum</a></li>
+          <li><a href="account.html">Account</a></li>
+          <li><a href="cart.html" class="active cart-link">Cart <span class="cart-count">0</span></a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <div class="announcement-bar">
+    <div class="marquee">
+      <span>⚠️ NEW VENDOR VERIFICATION SYSTEM IN PLACE • ALWAYS PGP ENCRYPT SENSITIVE INFORMATION • NEW MIRROR SITES AVAILABLE AT <span class="onion-link">nebula7qt2kernel.onion</span> • SYSTEM MAINTENANCE SCHEDULED FOR 08/15/2025 • NEVER SHARE YOUR PRIVATE KEYS • VERIFY ALL BITCOIN ADDRESSES BEFORE SENDING</span>
+    </div>
+  </div>
+
+  <main class="main-content cart-wrapper">
+    <div class="empty-cart-container">
+      <div class="empty-cart-icon">🛒</div>
+      <h2 class="empty-cart-title">Your cart is empty</h2>
+      <p class="empty-cart-message">You haven't added any products to your cart yet.</p>
+      <a href="index.html" class="continue-shopping-button">Browse Marketplace</a>
+      
+      <div class="cart-login-message">
+        <p>Already have items in your cart?</p>
+        <a href="account.html" class="cart-login-link">Login to view your cart</a>
+      </div>
+    </div>
+    
+    <div class="cart-sidebar">
+      <div class="cart-help-section">
+        <h3 class="help-title">Shopping Securely</h3>
+        <ul class="help-list">
+          <li class="help-item">
+            <div class="help-icon">🔒</div>
+            <div class="help-text">Always verify PGP signatures before finalizing orders</div>
+          </li>
+          <li class="help-item">
+            <div class="help-icon">₿</div>
+            <div class="help-text">Bitcoin transactions are secured through our escrow system</div>
+          </li>
+          <li class="help-item">
+            <div class="help-icon">⚠️</div>
+            <div class="help-text">Only communicate with vendors through market messages</div>
+          </li>
+          <li class="help-item">
+            <div class="help-icon">📦</div>
+            <div class="help-text">Digital products are delivered instantly after payment confirmation</div>
+          </li>
+        </ul>
+      </div>
+      
+      <div class="cart-notice">
+        <div class="notice-heading">Important Notice</div>
+        <p class="notice-text">
+          All transactions on Nebula Market are protected by our Bitcoin escrow system. Funds are only released to the vendor after you confirm receipt of your order.
+        </p>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-container">
+      <div class="footer-section">
+        <h3 class="footer-heading">Nebula Market</h3>
+        <p class="footer-description">Established 2023. The most secure marketplace on the dark web.</p>
+        <div class="pgp-key-container">
+          <span class="pgp-label">Market PGP:</span>
+          <pre class="pgp-key">-----BEGIN PGP PUBLIC KEY BLOCK-----
+Version: GnuPG v2.0.22
+
+mQENBGRxyz8BCACvL/7...</pre>
+          <a href="#" class="pgp-copy-link">Copy Full Key</a>
+        </div>
+      </div>
+      
+      <div class="footer-section">
+        <h3 class="footer-heading">Mirror Links</h3>
+        <ul class="mirror-links">
+          <li><a href="#" class="onion-link">nebula7qt2kernel.onion</a> <span class="status-dot online"></span></li>
+          <li><a href="#" class="onion-link">nebula24cryptomark3t.onion</a> <span class="status-dot online"></span></li>
+          <li><a href="#" class="onion-link">nebula8secure9hub.onion</a> <span class="status-dot offline"></span></li>
+          <li><a href="#" class="onion-link">nebulamarketv4.onion</a> <span class="status-dot online"></span></li>
+        </ul>
+      </div>
+      
+      <div class="footer-section">
+        <h3 class="footer-heading">Security</h3>
+        <ul class="security-links">
+          <li><a href="security.html">Security Measures</a></li>
+          <li><a href="pgp.html">PGP Tutorial</a></li>
+          <li><a href="bitcoin.html">Bitcoin Guide</a></li>
+          <li><a href="faq.html">FAQ</a></li>
+        </ul>
+      </div>
+      
+      <div class="footer-section">
+        <h3 class="footer-heading">Support</h3>
+        <ul class="support-links">
+          <li><a href="tickets.html">Support Tickets</a></li>
+          <li><a href="disputes.html">Dispute Resolution</a></li>
+          <li><a href="forum.html">Community Forum</a></li>
+        </ul>
+      </div>
+    </div>
+    
+    <div class="footer-bottom">
+      <p class="footer-notice">This is a fictional marketplace for educational purposes only. All products are fictitious.</p>
+      <p class="uptime-notice">Market Uptime: <span class="uptime">99.87%</span> | Last Updated: <span class="last-updated">08/05/2025 03:47 UTC</span></p>
+    </div>
+  </footer>
+</body>
+</html>

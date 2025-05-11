@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Admin Dashboard - Nebula Market</title>
+  <link rel="stylesheet" href="/css/reset.css">
+  <link rel="stylesheet" href="/css/styles.css">
+  <link rel="stylesheet" href="/css/header.css">
+  <link rel="stylesheet" href="/css/admin.css">
+  <link rel="stylesheet" href="/css/animations.css">
+  <link rel="stylesheet" href="/css/footer.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Roboto+Mono:wght@300;400;600&display=swap">
+</head>
+<body>
+  <div class="encryption-overlay">
+    <div class="encryption-text">Establishing Secure Connection...</div>
+  </div>
+
+  <header class="site-header">
+    <div class="header-container">
+      <div class="logo">
+        <h1><span class="logo-nebula">NEBULA</span> <span class="logo-market">MARKET</span></h1>
+        <div class="logo-tagline">Admin Dashboard</div>
+      </div>
+      <div class="status-indicator">
+        <span class="status-dot online"></span>
+        <span class="status-text">SECURE CONNECTION</span>
+      </div>
+    </div>
+  </header>
+
+  <main class="main-content admin-wrapper">
+    <div class="admin-sidebar">
+      <nav class="admin-nav">
+        <ul>
+          <li><a href="#dashboard" class="active">Dashboard</a></li>
+          <li><a href="#vendors">Vendor Applications</a></li>
+          <li><a href="#products">Product Approvals</a></li>
+          <li><a href="#transactions">Transactions</a></li>
+          <li><a href="#settings">Settings</a></li>
+          <li><button id="logout" class="logout-button">Logout</button></li>
+        </ul>
+      </nav>
+    </div>
+
+    <div class="admin-content">
+      <section id="dashboard" class="admin-section active">
+        <h2>Dashboard Overview</h2>
+        <div class="stats-grid">
+          <div class="stat-card">
+            <h3>Pending Vendors</h3>
+            <p class="stat-number" id="pending-vendors">0</p>
+          </div>
+          <div class="stat-card">
+            <h3>Pending Products</h3>
+            <p class="stat-number" id="pending-products">0</p>
+          </div>
+          <div class="stat-card">
+            <h3>Active Orders</h3>
+            <p class="stat-number" id="active-orders">0</p>
+          </div>
+          <div class="stat-card">
+            <h3>Today's Revenue</h3>
+            <p class="stat-number" id="daily-revenue">0 BTC</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="vendors" class="admin-section">
+        <h2>Vendor Applications</h2>
+        <div class="vendor-applications" id="vendor-applications-list">
+          <!-- Vendor applications will be loaded here -->
+        </div>
+      </section>
+
+      <section id="products" class="admin-section">
+        <h2>Product Approvals</h2>
+        <div class="product-approvals" id="product-approvals-list">
+          <!-- Product approval requests will be loaded here -->
+        </div>
+      </section>
+
+      <section id="transactions" class="admin-section">
+        <h2>Transaction History</h2>
+        <div class="transaction-list" id="transaction-list">
+          <!-- Transactions will be loaded here -->
+        </div>
+      </section>
+
+      <section id="settings" class="admin-section">
+        <h2>System Settings</h2>
+        <form id="settings-form" class="settings-form">
+          <div class="form-group">
+            <label>Commission Rate (%)</label>
+            <input type="number" name="commission" min="0" max="100" step="0.1">
+          </div>
+          <div class="form-group">
+            <label>Minimum Withdrawal (BTC)</label>
+            <input type="number" name="min-withdrawal" min="0" step="0.001">
+          </div>
+          <button type="submit">Save Settings</button>
+        </form>
+      </section>
+    </div>
+  </main>
+
+  <script type="module">
+    import { supabase } from './src/supabase.js';
+    
+    // Check admin authentication
+    const checkAuth = async () => {
+      const { data: { user }, error } = await supabase.auth.getUser();
+      
+      if (error || !user) {
+        window.location.href = '/login.html';
+        return;
+      }
+
+      // Check if user is admin
+      const { data: adminData, error: adminError } = await supabase
+        .from('admins')
+        .select('*')
+        .eq('user_id', user.id)
+        .single();
+
+      if (adminError || !adminData) {
+        window.location.href = '/login.html';
+        return;
+      }
+    };
+
+    // Load dashboard data
+    const loadDashboard = async () => {
+      const { data: vendors } = await supabase
+        .from('vendor_applications')
+        .select('count')
+        .eq('status', 'pending');
+
+      const { data: products } = await supabase
+        .from('product_approvals')
+        .select('count')
+        .eq('status', 'pending');
+
+      document.getElementById('pending-vendors').textContent = vendors.count;
+      document.getElementById('pending-products').textContent = products.count;
+    };
+
+    // Navigation
+    document.querySelectorAll('.admin-nav a').forEach(link => {
+      link.addEventListener('click', (e) => {
+        e.preventDefault();
+        const targetId = e.target.getAttribute('href').substring(1);
+        
+        document.querySelectorAll('.admin-section').forEach(section => {
+          section.classList.remove('active');
+        });
+        
+        document.getElementById(targetId).classList.add('active');
+        
+        document.querySelectorAll('.admin-nav a').forEach(navLink => {
+          navLink.classList.remove('active');
+        });
+        
+        e.target.classList.add('active');
+      });
+    });
+
+    // Logout
+    document.getElementById('logout').addEventListener('click', async () => {
+      await supabase.auth.signOut();
+      window.location.href = '/login.html';
+    });
+
+    // Initialize
+    checkAuth();
+    loadDashboard();
+  </script>
+</body>
+</html>

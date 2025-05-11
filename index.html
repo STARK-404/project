@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nebula Market</title>
+  <link rel="stylesheet" href="/css/reset.css">
+  <link rel="stylesheet" href="/css/styles.css">
+  <link rel="stylesheet" href="/css/header.css">
+  <link rel="stylesheet" href="/css/products.css">
+  <link rel="stylesheet" href="/css/animations.css">
+  <link rel="stylesheet" href="/css/footer.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Roboto+Mono:wght@300;400;600&display=swap">
+</head>
+<body>
+  <div class="encryption-overlay">
+    <div class="encryption-text">Establishing Secure Connection...</div>
+  </div>
+
+  <header class="site-header">
+    <div class="header-container">
+      <div class="logo">
+        <h1><span class="logo-nebula">NEBULA</span> <span class="logo-market">MARKET</span></h1>
+        <div class="logo-tagline">Secure • Anonymous • Untraceable</div>
+      </div>
+      <div class="status-indicator">
+        <span class="status-dot online"></span>
+        <span class="status-text">SECURE CONNECTION</span>
+      </div>
+      <nav class="main-nav">
+        <ul>
+          <li><a href="index.html" class="active">Marketplace</a></li>
+          <li><a href="vendors.html">Vendors</a></li>
+          <li><a href="forum.html">Forum</a></li>
+          <li><a href="account.html">Account</a></li>
+          <li><a href="cart.html" class="cart-link">Cart <span class="cart-count">0</span></a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <div class="announcement-bar">
+    <div class="marquee">
+      <span>⚠️ NEW VENDOR VERIFICATION SYSTEM IN PLACE • ALWAYS PGP ENCRYPT SENSITIVE INFORMATION • NEW MIRROR SITES AVAILABLE AT <span class="onion-link">nebula7qt2kernel.onion</span> • SYSTEM MAINTENANCE SCHEDULED FOR 08/15/2025 • NEVER SHARE YOUR PRIVATE KEYS • VERIFY ALL BITCOIN ADDRESSES BEFORE SENDING</span>
+    </div>
+  </div>
+
+  <main class="main-content">
+    <div class="sidebar">
+      <div class="search-container">
+        <form class="search-form" action="search.html" method="get">
+          <input type="search" name="q" placeholder="Search products..." class="search-input">
+          <button type="submit" class="search-button">Search</button>
+        </form>
+      </div>
+      
+      <div class="categories-container">
+        <h2 class="sidebar-heading">Categories</h2>
+        <ul class="categories-list">
+          <li><a href="category.html?id=digital" class="category-link active">Digital Products</a></li>
+          <li><a href="category.html?id=services" class="category-link">Services</a></li>
+          <li><a href="category.html?id=electronics" class="category-link">Electronics</a></li>
+          <li><a href="category.html?id=security" class="category-link">Security Tools</a></li>
+          <li><a href="category.html?id=software" class="category-link">Software</a></li>
+          <li><a href="category.html?id=guides" class="category-link">Guides & Manuals</a></li>
+          <li><a href="category.html?id=other" class="category-link">Other</a></li>
+        </ul>
+      </div>
+      
+      <div class="filters-container">
+        <h2 class="sidebar-heading">Filters</h2>
+        <form class="filters-form" action="index.html" method="get">
+          <div class="filter-group">
+            <h3 class="filter-title">Price (BTC)</h3>
+            <div class="price-range">
+              <input type="text" name="min" placeholder="Min" class="price-input">
+              <span class="price-separator">-</span>
+              <input type="text" name="max" placeholder="Max" class="price-input">
+            </div>
+          </div>
+          
+          <div class="filter-group">
+            <h3 class="filter-title">Vendor Rating</h3>
+            <div class="rating-options">
+              <label class="rating-label">
+                <input type="checkbox" name="rating" value="5" checked>
+                5+ Stars
+              </label>
+              <label class="rating-label">
+                <input type="checkbox" name="rating" value="4" checked>
+                4+ Stars
+              </label>
+              <label class="rating-label">
+                <input type="checkbox" name="rating" value="3">
+                3+ Stars
+              </label>
+            </div>
+          </div>
+          
+          <div class="filter-group">
+            <h3 class="filter-title">Shipping From</h3>
+            <select name="region" class="region-select">
+              <option value="">Any Region</option>
+              <option value="na">North America</option>
+              <option value="eu">Europe</option>
+              <option value="as">Asia</option>
+              <option value="oc">Oceania</option>
+              <option value="sa">South America</option>
+              <option value="af">Africa</option>
+            </select>
+          </div>
+          
+          <button type="submit" class="apply-filters-button">Apply Filters</button>
+        </form>
+      </div>
+    </div>
+
+    <div class="products-container">
+      <div class="products-header">
+        <h2 class="products-title">Digital Products</h2>
+        <div class="products-sorting">
+          <span class="sort-label">Sort by:</span>
+          <a href="?sort=newest" class="sort-option active">Newest</a>
+          <a href="?sort=popular" class="sort-option">Popular</a>
+          <a href="?sort=price-low" class="sort-option">Price: Low to High</a>
+          <a href="?sort=price-high" class="sort-option">Price: High to Low</a>
+        </div>
+      </div>
+
+      <div class="products-grid">
+        <div class="product-card">
+          <div class="product-rating trusted">
+            <span class="rating-icon">★</span>
+            <span class="rating-text">Trusted</span>
+          </div>
+          <div class="product-image">
+            <img src="https://images.pexels.com/photos/6457578/pexels-photo-6457578.jpeg" alt="Secure VPN Service">
+          </div>
+          <div class="product-details">
+            <h3 class="product-title">Premium VPN Service - 1 Year</h3>
+            <div class="vendor-info">
+              <span class="vendor-name">CryptoShield</span>
+              <span class="vendor-rating">4.97 ★</span>
+            </div>
+            <p class="product-description">Military-grade encryption, no logs, supports P2P, 100+ servers worldwide.</p>
+            <div class="product-footer">
+              <span class="product-price">0.012 BTC</span>
+              <a href="product.html?id=vpn-yearly" class="view-button">View</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-card">
+          <div class="product-rating featured">
+            <span class="rating-icon">⚡</span>
+            <span class="rating-text">Featured</span>
+          </div>
+          <div class="product-image">
+            <img src="https://images.pexels.com/photos/5380642/pexels-photo-5380642.jpeg" alt="Encrypted Email Service">
+          </div>
+          <div class="product-details">
+            <h3 class="product-title">Secure Email Account - Lifetime</h3>
+            <div class="vendor-info">
+              <span class="vendor-name">PrivacyGuard</span>
+              <span class="vendor-rating">5.00 ★</span>
+            </div>
+            <p class="product-description">End-to-end encrypted email service with zero knowledge architecture.</p>
+            <div class="product-footer">
+              <span class="product-price">0.032 BTC</span>
+              <a href="product.html?id=secure-email" class="view-button">View</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-card">
+          <div class="product-rating new">
+            <span class="rating-icon">★</span>
+            <span class="rating-text">New</span>
+          </div>
+          <div class="product-image">
+            <img src="https://images.pexels.com/photos/2582937/pexels-photo-2582937.jpeg" alt="Network Security Guide">
+          </div>
+          <div class="product-details">
+            <h3 class="product-title">Advanced Network Security Guide</h3>
+            <div class="vendor-info">
+              <span class="vendor-name">InfoSec Academy</span>
+              <span class="vendor-rating">4.85 ★</span>
+            </div>
+            <p class="product-description">Comprehensive guide on securing networks, detecting intrusions, and more.</p>
+            <div class="product-footer">
+              <span class="product-price">0.008 BTC</span>
+              <a href="product.html?id=network-security" class="view-button">View</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-card">
+          <div class="product-image">
+            <img src="https://images.pexels.com/photos/5380651/pexels-photo-5380651.jpeg" alt="Hardware Security Module">
+          </div>
+          <div class="product-details">
+            <h3 class="product-title">Hardware Security Module - OpenPGP</h3>
+            <div class="vendor-info">
+              <span class="vendor-name">CryptoTech</span>
+              <span class="vendor-rating">4.91 ★</span>
+            </div>
+            <p class="product-description">USB hardware key for secure authentication and encryption.</p>
+            <div class="product-footer">
+              <span class="product-price">0.025 BTC</span>
+              <a href="product.html?id=hardware-security" class="view-button">View</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-card">
+          <div class="product-image">
+            <img src="https://images.pexels.com/photos/4482900/pexels-photo-4482900.jpeg" alt="Crypto Trading Bot">
+          </div>
+          <div class="product-details">
+            <h3 class="product-title">Automated Crypto Trading Bot</h3>
+            <div class="vendor-info">
+              <span class="vendor-name">BlockchainMaster</span>
+              <span class="vendor-rating">4.78 ★</span>
+            </div>
+            <p class="product-description">Algorithmic trading software for major cryptocurrencies.</p>
+            <div class="product-footer">
+              <span class="product-price">0.045 BTC</span>
+              <a href="product.html?id=crypto-bot" class="view-button">View</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-card">
+          <div class="product-image">
+            <img src="https://images.pexels.com/photos/7988079/pexels-photo-7988079.jpeg" alt="Anonymous Phone Number">
+          </div>
+          <div class="product-details">
+            <h3 class="product-title">Anonymous Phone Number - 3 Months</h3>
+            <div class="vendor-info">
+              <span class="vendor-name">GhostComm</span>
+              <span class="vendor-rating">4.89 ★</span>
+            </div>
+            <p class="product-description">Private phone number with unlimited texts and 500 minutes of voice.</p>
+            <div class="product-footer">
+              <span class="product-price">0.015 BTC</span>
+              <a href="product.html?id=anon-phone" class="view-button">View</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="pagination">
+        <a href="#" class="pagination-link active">1</a>
+        <a href="#" class="pagination-link">2</a>
+        <a href="#" class="pagination-link">3</a>
+        <span class="pagination-ellipsis">...</span>
+        <a href="#" class="pagination-link">12</a>
+        <a href="#" class="pagination-link next-page">Next →</a>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-container">
+      <div class="footer-section">
+        <h3 class="footer-heading">Nebula Market</h3>
+        <p class="footer-description">Established 2023. The most secure marketplace on the dark web.</p>
+        <div class="pgp-key-container">
+          <span class="pgp-label">Market PGP:</span>
+          <pre class="pgp-key">-----BEGIN PGP PUBLIC KEY BLOCK-----
+Version: GnuPG v2.0.22
+
+mQENBGRxyz8BCACvL/7...</pre>
+          <a href="#" class="pgp-copy-link">Copy Full Key</a>
+        </div>
+      </div>
+      
+      <div class="footer-section">
+        <h3 class="footer-heading">Mirror Links</h3>
+        <ul class="mirror-links">
+          <li><a href="#" class="onion-link">nebula7qt2kernel.onion</a> <span class="status-dot online"></span></li>
+          <li><a href="#" class="onion-link">nebula24cryptomark3t.onion</a> <span class="status-dot online"></span></li>
+          <li><a href="#" class="onion-link">nebula8secure9hub.onion</a> <span class="status-dot offline"></span></li>
+          <li><a href="#" class="onion-link">nebulamarketv4.onion</a> <span class="status-dot online"></span></li>
+        </ul>
+      </div>
+      
+      <div class="footer-section">
+        <h3 class="footer-heading">Security</h3>
+        <ul class="security-links">
+          <li><a href="security.html">Security Measures</a></li>
+          <li><a href="pgp.html">PGP Tutorial</a></li>
+          <li><a href="bitcoin.html">Bitcoin Guide</a></li>
+          <li><a href="faq.html">FAQ</a></li>
+        </ul>
+      </div>
+      
+      <div class="footer-section">
+        <h3 class="footer-heading">Support</h3>
+        <ul class="support-links">
+          <li><a href="tickets.html">Support Tickets</a></li>
+          <li><a href="disputes.html">Dispute Resolution</a></li>
+          <li><a href="forum.html">Community Forum</a></li>
+        </ul>
+      </div>
+    </div>
+    
+    <div class="footer-bottom">
+      <p class="footer-notice">This is a fictional marketplace for educational purposes only. All products are fictitious.</p>
+      <p class="uptime-notice">Market Uptime: <span class="uptime">99.87%</span> | Last Updated: <span class="last-updated">08/05/2025 03:47 UTC</span></p>
+    </div>
+  </footer>
+</body>
+</html>

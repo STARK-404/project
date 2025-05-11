@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sign Up - Nebula Market</title>
+  <link rel="stylesheet" href="/css/reset.css">
+  <link rel="stylesheet" href="/css/styles.css">
+  <link rel="stylesheet" href="/css/header.css">
+  <link rel="stylesheet" href="/css/account.css">
+  <link rel="stylesheet" href="/css/animations.css">
+  <link rel="stylesheet" href="/css/footer.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Roboto+Mono:wght@300;400;600&display=swap">
+</head>
+<body>
+  <div class="encryption-overlay">
+    <div class="encryption-text">Establishing Secure Connection...</div>
+  </div>
+
+  <header class="site-header">
+    <div class="header-container">
+      <div class="logo">
+        <h1><span class="logo-nebula">NEBULA</span> <span class="logo-market">MARKET</span></h1>
+        <div class="logo-tagline">Secure • Anonymous • Untraceable</div>
+      </div>
+      <div class="status-indicator">
+        <span class="status-dot online"></span>
+        <span class="status-text">SECURE CONNECTION</span>
+      </div>
+      <nav class="main-nav">
+        <ul>
+          <li><a href="index.html">Marketplace</a></li>
+          <li><a href="vendors.html">Vendors</a></li>
+          <li><a href="account.html">Account</a></li>
+          <li><a href="cart.html" class="cart-link">Cart <span class="cart-count">0</span></a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="main-content account-wrapper">
+    <div class="login-container">
+      <div class="login-form-container">
+        <h2 class="login-heading">Create an Account</h2>
+        <form class="login-form" id="signup-form">
+          <div class="form-group">
+            <label for="username" class="form-label">Username</label>
+            <input type="text" id="username" name="username" required class="form-input">
+          </div>
+
+          <div class="form-group">
+            <label for="email" class="form-label">Email</label>
+            <input type="email" id="email" name="email" required class="form-input">
+          </div>
+          
+          <div class="form-group">
+            <label for="password" class="form-label">Password</label>
+            <input type="password" id="password" name="password" required class="form-input">
+          </div>
+
+          <div class="form-group">
+            <label for="confirm-password" class="form-label">Confirm Password</label>
+            <input type="password" id="confirm-password" name="confirm-password" required class="form-input">
+          </div>
+
+          <div class="form-group captcha-group">
+            <label class="form-label">Security Verification</label>
+            <div class="captcha-container">
+              <div class="captcha-image">
+                <img id="captcha-img" alt="CAPTCHA">
+              </div>
+              <input type="text" id="captcha-input" name="captcha" placeholder="Enter text from image" required class="captcha-input">
+              <button type="button" id="refresh-captcha" class="captcha-refresh">↻</button>
+            </div>
+          </div>
+          
+          <div class="form-group">
+            <button type="submit" class="login-button">Create Account</button>
+          </div>
+          
+          <div class="form-group">
+            <p>Already have an account? <a href="login.html">Login</a></p>
+          </div>
+        </form>
+      </div>
+    </div>
+  </main>
+
+  <script type="module">
+    import { supabase } from './src/supabase.js';
+    import { refreshCaptcha } from './src/captcha.js';
+
+    const form = document.getElementById('signup-form');
+    const captchaImg = document.getElementById('captcha-img');
+    const refreshButton = document.getElementById('refresh-captcha');
+    
+    let captchaText = refreshCaptcha(captchaImg);
+    
+    refreshButton.addEventListener('click', () => {
+      captchaText = refreshCaptcha(captchaImg);
+    });
+
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      
+      const email = form.email.value;
+      const password = form.password.value;
+      const confirmPassword = form['confirm-password'].value;
+      const username = form.username.value;
+      const captchaInput = form['captcha-input'].value;
+
+      if (captchaInput.toLowerCase() !== captchaText.toLowerCase()) {
+        alert('Incorrect CAPTCHA. Please try again.');
+        captchaText = refreshCaptcha(captchaImg);
+        form['captcha-input'].value = '';
+        return;
+      }
+
+      if (password !== confirmPassword) {
+        alert("Passwords don't match");
+        return;
+      }
+
+      try {
+        const { data, error } = await supabase.auth.signUp({
+          email,
+          password,
+          options: {
+            data: {
+              username
+            }
+          }
+        });
+
+        if (error) throw error;
+
+        // Redirect to login page after successful signup
+        alert('Account created successfully! Please log in.');
+        window.location.href = '/login.html';
+      } catch (error) {
+        alert(error.message);
+      }
+    });
+  </script>
+</body>
+</html>

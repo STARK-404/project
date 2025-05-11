@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Account - Nebula Market</title>
+  <link rel="stylesheet" href="/css/reset.css">
+  <link rel="stylesheet" href="/css/styles.css">
+  <link rel="stylesheet" href="/css/header.css">
+  <link rel="stylesheet" href="/css/account.css">
+  <link rel="stylesheet" href="/css/animations.css">
+  <link rel="stylesheet" href="/css/footer.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Roboto+Mono:wght@300;400;600&display=swap">
+</head>
+<body>
+  <div class="encryption-overlay">
+    <div class="encryption-text">Establishing Secure Connection...</div>
+  </div>
+
+  <header class="site-header">
+    <div class="header-container">
+      <div class="logo">
+        <h1><span class="logo-nebula">NEBULA</span> <span class="logo-market">MARKET</span></h1>
+        <div class="logo-tagline">Secure • Anonymous • Untraceable</div>
+      </div>
+      <div class="status-indicator">
+        <span class="status-dot online"></span>
+        <span class="status-text">SECURE CONNECTION</span>
+      </div>
+      <nav class="main-nav">
+        <ul>
+          <li><a href="index.html">Marketplace</a></li>
+          <li><a href="vendors.html">Vendors</a></li>
+          <li><a href="forum.html">Forum</a></li>
+          <li><a href="account.html" class="active">Account</a></li>
+          <li><a href="cart.html" class="cart-link">Cart <span class="cart-count">0</span></a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <div class="announcement-bar">
+    <div class="marquee">
+      <span>⚠️ NEW VENDOR VERIFICATION SYSTEM IN PLACE • ALWAYS PGP ENCRYPT SENSITIVE INFORMATION • NEW MIRROR SITES AVAILABLE AT <span class="onion-link">nebula7qt2kernel.onion</span> • SYSTEM MAINTENANCE SCHEDULED FOR 08/15/2025 • NEVER SHARE YOUR PRIVATE KEYS • VERIFY ALL BITCOIN ADDRESSES BEFORE SENDING</span>
+    </div>
+  </div>
+
+  <main class="main-content account-wrapper">
+    <div class="login-container">
+      <div class="login-form-container">
+        <h2 class="login-heading">Login to Nebula Market</h2>
+        <form class="login-form" action="account-dashboard.html" method="get">
+          <div class="form-group">
+            <label for="username" class="form-label">Username</label>
+            <input type="text" id="username" name="username" required class="form-input">
+          </div>
+          
+          <div class="form-group">
+            <label for="password" class="form-label">Password</label>
+            <input type="password" id="password" name="password" required class="form-input">
+          </div>
+          
+          <div class="form-group captcha-group">
+            <label class="form-label">Security Verification</label>
+            <div class="captcha-container">
+              <div class="captcha-image">
+                <img src="https://images.pexels.com/photos/3861969/pexels-photo-3861969.jpeg" alt="CAPTCHA Image">
+              </div>
+              <input type="text" name="captcha" placeholder="Enter text from image" required class="captcha-input">
+              <button type="button" class="captcha-refresh">↻</button>
+            </div>
+          </div>
+          
+          <div class="form-group remember-group">
+            <label class="remember-label">
+              <input type="checkbox" name="remember" class="remember-checkbox">
+              Stay logged in for 8 hours
+            </label>
+            <a href="forgot-password.html" class="forgot-link">Forgot password?</a>
+          </div>
+          
+          <div class="form-group">
+            <button type="submit" class="login-button">Login Securely</button>
+          </div>
+          
+          <div class="form-group pgp-login">
+            <a href="pgp-login.html" class="pgp-login-link">PGP Secure Login</a>
+          </div>
+        </form>
+      </div>
+
+      <div class="register-container">
+        <h2 class="register-heading">New to Nebula Market?</h2>
+        <p class="register-text">Create an account to browse products, make purchases, and track your orders securely.</p>
+        
+        <div class="security-highlights">
+          <div class="security-item">
+            <div class="security-icon">🔒</div>
+            <div class="security-description">End-to-end encryption for all communications</div>
+          </div>
+          
+          <div class="security-item">
+            <div class="security-icon">₿</div>
+            <div class="security-description">Bitcoin escrow system for secure transactions</div>
+          </div>
+          
+          <div class="security-item">
+            <div class="security-icon">👤</div>
+            <div class="security-description">Complete anonymity with no personal data collection</div>
+          </div>
+          
+          <div class="security-item">
+            <div class="security-icon">⚡</div>
+            <div class="security-description">Fast and secure order processing</div>
+          </div>
+        </div>
+        
+        <a href="register.html" class="register-button">Create New Account</a>
+        
+        <div class="market-stats">
+          <div class="stats-item">
+            <div class="stats-count">12,450+</div>
+            <div class="stats-label">Products</div>
+          </div>
+          
+          <div class="stats-item">
+            <div class="stats-count">854+</div>
+            <div class="stats-label">Vendors</div>
+          </div>
+          
+          <div class="stats-item">
+            <div class="stats-count">185,200+</div>
+            <div class="stats-label">Users</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-container">
+      <div class="footer-section">
+        <h3 class="footer-heading">Nebula Market</h3>
+        <p class="footer-description">Established 2023. The most secure marketplace on the dark web.</p>
+        <div class="pgp-key-container">
+          <span class="pgp-label">Market PGP:</span>
+          <pre class="pgp-key">-----BEGIN PGP PUBLIC KEY BLOCK-----
+Version: GnuPG v2.0.22
+
+mQENBGRxyz8BCACvL/7...</pre>
+          <a href="#" class="pgp-copy-link">Copy Full Key</a>
+        </div>
+      </div>
+      
+      <div class="footer-section">
+        <h3 class="footer-heading">Mirror Links</h3>
+        <ul class="mirror-links">
+          <li><a href="#" class="onion-link">nebula7qt2kernel.onion</a> <span class="status-dot online"></span></li>
+          <li><a href="#" class="onion-link">nebula24cryptomark3t.onion</a> <span class="status-dot online"></span></li>
+          <li><a href="#" class="onion-link">nebula8secure9hub.onion</a> <span class="status-dot offline"></span></li>
+          <li><a href="#" class="onion-link">nebulamarketv4.onion</a> <span class="status-dot online"></span></li>
+        </ul>
+      </div>
+      
+      <div class="footer-section">
+        <h3 class="footer-heading">Security</h3>
+        <ul class="security-links">
+          <li><a href="security.html">Security Measures</a></li>
+          <li><a href="pgp.html">PGP Tutorial</a></li>
+          <li><a href="bitcoin.html">Bitcoin Guide</a></li>
+          <li><a href="faq.html">FAQ</a></li>
+        </ul>
+      </div>
+      
+      <div class="footer-section">
+        <h3 class="footer-heading">Support</h3>
+        <ul class="support-links">
+          <li><a href="tickets.html">Support Tickets</a></li>
+          <li><a href="disputes.html">Dispute Resolution</a></li>
+          <li><a href="forum.html">Community Forum</a></li>
+        </ul>
+      </div>
+    </div>
+    
+    <div class="footer-bottom">
+      <p class="footer-notice">This is a fictional marketplace for educational purposes only. All products are fictitious.</p>
+      <p class="uptime-notice">Market Uptime: <span class="uptime">99.87%</span> | Last Updated: <span class="last-updated">08/05/2025 03:47 UTC</span></p>
+    </div>
+  </footer>
+</body>
+</html>

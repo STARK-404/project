@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vendors - Nebula Market</title>
+  <link rel="stylesheet" href="/css/reset.css">
+  <link rel="stylesheet" href="/css/styles.css">
+  <link rel="stylesheet" href="/css/header.css">
+  <link rel="stylesheet" href="/css/vendors.css">
+  <link rel="stylesheet" href="/css/animations.css">
+  <link rel="stylesheet" href="/css/footer.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Roboto+Mono:wght@300;400;600&display=swap">
+</head>
+<body>
+  <div class="encryption-overlay">
+    <div class="encryption-text">Establishing Secure Connection...</div>
+  </div>
+
+  <header class="site-header">
+    <div class="header-container">
+      <div class="logo">
+        <h1><span class="logo-nebula">NEBULA</span> <span class="logo-market">MARKET</span></h1>
+        <div class="logo-tagline">Secure • Anonymous • Untraceable</div>
+      </div>
+      <div class="status-indicator">
+        <span class="status-dot online"></span>
+        <span class="status-text">SECURE CONNECTION</span>
+      </div>
+      <nav class="main-nav">
+        <ul>
+          <li><a href="index.html">Marketplace</a></li>
+          <li><a href="vendors.html" class="active">Vendors</a></li>
+          <li><a href="forum.html">Forum</a></li>
+          <li><a href="account.html">Account</a></li>
+          <li><a href="cart.html" class="cart-link">Cart <span class="cart-count">0</span></a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <div class="announcement-bar">
+    <div class="marquee">
+      <span>⚠️ NEW VENDOR VERIFICATION SYSTEM IN PLACE • ALWAYS PGP ENCRYPT SENSITIVE INFORMATION • NEW MIRROR SITES AVAILABLE AT <span class="onion-link">nebula7qt2kernel.onion</span> • SYSTEM MAINTENANCE SCHEDULED FOR 08/15/2025 • NEVER SHARE YOUR PRIVATE KEYS • VERIFY ALL BITCOIN ADDRESSES BEFORE SENDING</span>
+    </div>
+  </div>
+
+  <main class="main-content">
+    <div class="sidebar">
+      <div class="search-container">
+        <form class="search-form" action="vendors-search.html" method="get">
+          <input type="search" name="q" placeholder="Search vendors..." class="search-input">
+          <button type="submit" class="search-button">Search</button>
+        </form>
+      </div>
+      
+      <div class="vendor-filters-container">
+        <h2 class="sidebar-heading">Filters</h2>
+        <form class="filters-form" action="vendors.html" method="get">
+          <div class="filter-group">
+            <h3 class="filter-title">Vendor Level</h3>
+            <div class="level-options">
+              <label class="level-label">
+                <input type="checkbox" name="level" value="all" checked>
+                All Levels
+              </label>
+              <label class="level-label">
+                <input type="checkbox" name="level" value="5">
+                Level 5+
+              </label>
+              <label class="level-label">
+                <input type="checkbox" name="level" value="8">
+                Level 8+
+              </label>
+              <label class="level-label">
+                <input type="checkbox" name="level" value="10">
+                Level 10 (Top)
+              </label>
+            </div>
+          </div>
+          
+          <div class="filter-group">
+            <h3 class="filter-title">Rating</h3>
+            <div class="rating-options">
+              <label class="rating-label">
+                <input type="checkbox" name="rating" value="5" checked>
+                5+ Stars
+              </label>
+              <label class="rating-label">
+                <input type="checkbox" name="rating" value="4" checked>
+                4+ Stars
+              </label>
+              <label class="rating-label">
+                <input type="checkbox" name="rating" value="3">
+                3+ Stars
+              </label>
+            </div>
+          </div>
+          
+          <div class="filter-group">
+            <h3 class="filter-title">Active Since</h3>
+            <select name="active" class="active-select">
+              <option value="">Any time</option>
+              <option value="1m">1+ month</option>
+              <option value="3m">3+ months</option>
+              <option value="6m">6+ months</option>
+              <option value="1y" selected>1+ year</option>
+              <option value="2y">2+ years</option>
+            </select>
+          </div>
+          
+          <div class="filter-group">
+            <h3 class="filter-title">Categories</h3>
+            <div class="category-options">
+              <label class="category-label">
+                <input type="checkbox" name="category" value="digital" checked>
+                Digital Products
+              </label>
+              <label class="category-label">
+                <input type="checkbox" name="category" value="services" checked>
+                Services
+              </label>
+              <label class="category-label">
+                <input type="checkbox" name="category" value="electronics" checked>
+                Electronics
+              </label>
+              <label class="category-label">
+                <input type="checkbox" name="category" value="security" checked>
+                Security Tools
+              </label>
+            </div>
+          </div>
+          
+          <button type="submit" class="apply-filters-button">Apply Filters</button>
+        </form>
+      </div>
+    </div>
+
+    <div class="vendors-container">
+      <div class="vendors-header">
+        <h2 class="vendors-title">Top Vendors</h2>
+        <div class="vendors-sorting">
+          <span class="sort-label">Sort by:</span>
+          <a href="?sort=rating" class="sort-option active">Rating</a>
+          <a href="?sort=sales" class="sort-option">Sales</a>
+          <a href="?sort=products" class="sort-option">Products</a>
+          <a href="?sort=active" class="sort-option">Activity</a>
+        </div>
+      </div>
+
+      <div class="vendors-grid">
+        <div class="vendor-card trusted">
+          <div class="vendor-header">
+            <span class="vendor-level">Level 10</span>
+            <span class="vendor-badge trusted">TRUSTED</span>
+          </div>
+          <div class="vendor-profile">
+            <div class="vendor-avatar">
+              <img src="https://images.pexels.com/photos/5380651/pexels-photo-5380651.jpeg" alt="CryptoShield">
+            </div>
+            <div class="vendor-info">
+              <h3 class="vendor-name">CryptoShield</h3>
+              <div class="vendor-stats">
+                <span class="vendor-rating">★ 4.97</span>
+                <span class="vendor-sales">2,458 sales</span>
+                <span class="vendor-since">Since: Apr 2023</span>
+              </div>
+              <p class="vendor-description">Specialized in premium VPN services and encrypted communication tools.</p>
+            </div>
+          </div>
+          <div class="vendor-footer">
+            <a href="vendor.html?id=cryptoshield" class="vendor-view-button">View Profile</a>
+            <a href="#" class="vendor-message-button">Message</a>
+          </div>
+        </div>
+
+        <div class="vendor-card featured">
+          <div class="vendor-header">
+            <span class="vendor-level">Level 10</span>
+            <span class="vendor-badge featured">FEATURED</span>
+          </div>
+          <div class="vendor-profile">
+            <div class="vendor-avatar">
+              <img src="https://images.pexels.com/photos/2582937/pexels-photo-2582937.jpeg" alt="PrivacyGuard">
+            </div>
+            <div class="vendor-info">
+              <h3 class="vendor-name">PrivacyGuard</h3>
+              <div class="vendor-stats">
+                <span class="vendor-rating">★ 5.00</span>
+                <span class="vendor-sales">3,721 sales</span>
+                <span class="vendor-since">Since: Jan 2023</span>
+              </div>
+              <p class="vendor-description">Premier provider of secure email accounts and privacy protection services.</p>
+            </div>
+          </div>
+          <div class="vendor-footer">
+            <a href="vendor.html?id=privacyguard" class="vendor-view-button">View Profile</a>
+            <a href="#" class="vendor-message-button">Message</a>
+          </div>
+        </div>
+
+        <div class="vendor-card">
+          <div class="vendor-header">
+            <span class="vendor-level">Level 9</span>
+          </div>
+          <div class="vendor-profile">
+            <div class="vendor-avatar">
+              <img src="https://images.pexels.com/photos/4482900/pexels-photo-4482900.jpeg" alt="InfoSec Academy">
+            </div>
+            <div class="vendor-info">
+              <h3 class="vendor-name">InfoSec Academy</h3>
+              <div class="vendor-stats">
+                <span class="vendor-rating">★ 4.85</span>
+                <span class="vendor-sales">1,932 sales</span>
+                <span class="vendor-since">Since: Aug 2023</span>
+              </div>
+              <p class="vendor-description">Comprehensive security guides and courses from industry professionals.</p>
+            </div>
+          </div>
+          <div class="vendor-footer">
+            <a href="vendor.html?id=infosec" class="vendor-view-button">View Profile</a>
+            <a href="#" class="vendor-message-button">Message</a>
+          </div>
+        </div>
+
+        <div class="vendor-card">
+          <div class="vendor-header">
+            <span class="vendor-level">Level 10</span>
+          </div>
+          <div class="vendor-profile">
+            <div class="vendor-avatar">
+              <img src="https://images.pexels.com/photos/325223/pexels-photo-325223.jpeg" alt="CryptoTech">
+            </div>
+            <div class="vendor-info">
+              <h3 class="vendor-name">CryptoTech</h3>
+              <div class="vendor-stats">
+                <span class="vendor-rating">★ 4.91</span>
+                <span class="vendor-sales">2,185 sales</span>
+                <span class="vendor-since">Since: Feb 2023</span>
+              </div>
+              <p class="vendor-description">Hardware security solutions, including keys, encrypted drives, and secure devices.</p>
+            </div>
+          </div>
+          <div class="vendor-footer">
+            <a href="vendor.html?id=cryptotech" class="vendor-view-button">View Profile</a>
+            <a href="#" class="vendor-message-button">Message</a>
+          </div>
+        </div>
+
+        <div class="vendor-card">
+          <div class="vendor-header">
+            <span class="vendor-level">Level 8</span>
+          </div>
+          <div class="vendor-profile">
+            <div class="vendor-avatar">
+              <img src="https://images.pexels.com/photos/6457578/pexels-photo-6457578.jpeg" alt="BlockchainMaster">
+            </div>
+            <div class="vendor-info">
+              <h3 class="vendor-name">BlockchainMaster</h3>
+              <div class="vendor-stats">
+                <span class="vendor-rating">★ 4.78</span>
+                <span class="vendor-sales">1,456 sales</span>
+                <span class="vendor-since">Since: Oct 2023</span>
+              </div>
+              <p class="vendor-description">Crypto trading software, bots, and financial privacy tools.</p>
+            </div>
+          </div>
+          <div class="vendor-footer">
+            <a href="vendor.html?id=blockchainmaster" class="vendor-view-button">View Profile</a>
+            <a href="#" class="vendor-message-button">Message</a>
+          </div>
+        </div>
+
+        <div class="vendor-card">
+          <div class="vendor-header">
+            <span class="vendor-level">Level 9</span>
+          </div>
+          <div class="vendor-profile">
+            <div class="vendor-avatar">
+              <img src="https://images.pexels.com/photos/7988079/pexels-photo-7988079.jpeg" alt="GhostComm">
+            </div>
+            <div class="vendor-info">
+              <h3 class="vendor-name">GhostComm</h3>
+              <div class="vendor-stats">
+                <span class="vendor-rating">★ 4.89</span>
+                <span class="vendor-sales">1,879 sales</span>
+                <span class="vendor-since">Since: May 2023</span>
+              </div>
+              <p class="vendor-description">Anonymous communication services, including phone numbers and messaging.</p>
+            </div>
+          </div>
+          <div class="vendor-footer">
+            <a href="vendor.html?id=ghostcomm" class="vendor-view-button">View Profile</a>
+            <a href="#" class="vendor-message-button">Message</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="pagination">
+        <a href="#" class="pagination-link active">1</a>
+        <a href="#" class="pagination-link">2</a>
+        <a href="#" class="pagination-link">3</a>
+        <span class="pagination-ellipsis">...</span>
+        <a href="#" class="pagination-link">8</a>
+        <a href="#" class="pagination-link next-page">Next →</a>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-container">
+      <div class="footer-section">
+        <h3 class="footer-heading">Nebula Market</h3>
+        <p class="footer-description">Established 2023. The most secure marketplace on the dark web.</p>
+        <div class="pgp-key-container">
+          <span class="pgp-label">Market PGP:</span>
+          <pre class="pgp-key">-----BEGIN PGP PUBLIC KEY BLOCK-----
+Version: GnuPG v2.0.22
+
+mQENBGRxyz8BCACvL/7...</pre>
+          <a href="#" class="pgp-copy-link">Copy Full Key</a>
+        </div>
+      </div>
+      
+      <div class="footer-section">
+        <h3 class="footer-heading">Mirror Links</h3>
+        <ul class="mirror-links">
+          <li><a href="#" class="onion-link">nebula7qt2kernel.onion</a> <span class="status-dot online"></span></li>
+          <li><a href="#" class="onion-link">nebula24cryptomark3t.onion</a> <span class="status-dot online"></span></li>
+          <li><a href="#" class="onion-link">nebula8secure9hub.onion</a> <span class="status-dot offline"></span></li>
+          <li><a href="#" class="onion-link">nebulamarketv4.onion</a> <span class="status-dot online"></span></li>
+        </ul>
+      </div>
+      
+      <div class="footer-section">
+        <h3 class="footer-heading">Security</h3>
+        <ul class="security-links">
+          <li><a href="security.html">Security Measures</a></li>
+          <li><a href="pgp.html">PGP Tutorial</a></li>
+          <li><a href="bitcoin.html">Bitcoin Guide</a></li>
+          <li><a href="faq.html">FAQ</a></li>
+        </ul>
+      </div>
+      
+      <div class="footer-section">
+        <h3 class="footer-heading">Support</h3>
+        <ul class="support-links">
+          <li><a href="tickets.html">Support Tickets</a></li>
+          <li><a href="disputes.html">Dispute Resolution</a></li>
+          <li><a href="forum.html">Community Forum</a></li>
+        </ul>
+      </div>
+    </div>
+    
+    <div class="footer-bottom">
+      <p class="footer-notice">This is a fictional marketplace for educational purposes only. All products are fictitious.</p>
+      <p class="uptime-notice">Market Uptime: <span class="uptime">99.87%</span> | Last Updated: <span class="last-updated">08/05/2025 03:47 UTC</span></p>
+    </div>
+  </footer>
+</body>
+</html>
