@@ -3,312 +3,386 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Nebula Market</title>
-  <link rel="stylesheet" href="/css/reset.css">
-  <link rel="stylesheet" href="/css/styles.css">
-  <link rel="stylesheet" href="/css/header.css">
-  <link rel="stylesheet" href="/css/products.css">
-  <link rel="stylesheet" href="/css/animations.css">
-  <link rel="stylesheet" href="/css/footer.css">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Roboto+Mono:wght@300;400;600&display=swap">
+  <title>Nebula Market – Home</title>
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="assets/css/style.css" />
 </head>
 <body>
-  <div class="encryption-overlay">
-    <div class="encryption-text">Establishing Secure Connection...</div>
-  </div>
 
-  <header class="site-header">
-    <div class="header-container">
-      <div class="logo">
-        <h1><span class="logo-nebula">NEBULA</span> <span class="logo-market">MARKET</span></h1>
-        <div class="logo-tagline">Secure • Anonymous • Untraceable</div>
+  <!-- Header / Navigation -->
+  <header>
+    <nav class="navbar">
+      <!-- Brand Name / Logo -->
+      <a href="index.html" class="navbar-brand">Nebula Market</a>
+      <!-- Navigation Links -->
+      <ul class="nav-menu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="products.html">Products</a></li>
+        <!-- Forums link removed -->
+        <li><a href="faq.html">FAQ</a></li>
+        <li><a href="feedback.html">Feedback</a></li>
+      </ul>
+      <!-- User Auth Links -->
+      <div class="user-auth">
+        <a href="login.html">Login</a> or <a href="register.html">Register</a>
       </div>
-      <div class="status-indicator">
-        <span class="status-dot online"></span>
-        <span class="status-text">SECURE CONNECTION</span>
-      </div>
-      <nav class="main-nav">
-        <ul>
-          <li><a href="index.html" class="active">Marketplace</a></li>
-          <li><a href="vendors.html">Vendors</a></li>
-          <li><a href="forum.html">Forum</a></li>
-          <li><a href="account.html">Account</a></li>
-          <li><a href="cart.html" class="cart-link">Cart <span class="cart-count">0</span></a></li>
-        </ul>
-      </nav>
-    </div>
+      <!-- Currency Selector -->
+      <form class="currency-selector" action="#" method="get">
+        <select name="currency" id="currency-select">
+          <option value="EUR" selected>€ EUR (Default)</option>
+          <option value="USD">$ USD</option>
+          <option value="GBP">£ GBP</option>
+          <option value="AED">د.إ AED</option>
+          <option value="ARS">$ ARS</option>
+          <option value="AUD">A$ AUD</option>
+          <option value="BDT">৳ BDT</option>
+          <option value="BHD">.د.ب BHD</option>
+          <option value="BMD">$ BMD</option>
+          <option value="BRL">R$ BRL</option>
+          <option value="CAD">C$ CAD</option>
+          <option value="CHF">CHF CHF</option>
+          <option value="CLP">$ CLP</option>
+          <option value="CNY">¥ CNY</option>
+          <option value="CZK">Kč CZK</option>
+          <option value="DKK">kr DKK</option>
+          <option value="GEL">₾ GEL</option>
+          <option value="HKD">HK$ HKD</option>
+          <option value="HUF">Ft HUF</option>
+          <option value="IDR">Rp IDR</option>
+          <option value="ILS">₪ ILS</option>
+          <option value="INR">₹ INR</option>
+          <option value="JPY">¥ JPY</option>
+          <option value="KRW">₩ KRW</option>
+          <option value="KWD">د.ك KWD</option>
+          <option value="LKR">₨ LKR</option>
+          <option value="MMK">K MMK</option>
+          <option value="MXN">$ MXN</option>
+          <option value="MYR">RM MYR</option>
+          <option value="NGN">₦ NGN</option>
+          <option value="NOK">kr NOK</option>
+          <option value="NZD">NZ$ NZD</option>
+          <option value="PHP">₱ PHP</option>
+          <option value="PKR">₨ PKR</option>
+          <option value="PLN">zł PLN</option>
+          <option value="RUB">₽ RUB</option>
+          <option value="SAR">﷼ SAR</option>
+          <option value="SEK">kr SEK</option>
+          <option value="SGD">S$ SGD</option>
+          <option value="THB">฿ THB</option>
+          <option value="TRY">₺ TRY</option>
+          <option value="TWD">NT$ TWD</option>
+          <option value="UAH">₴ UAH</option>
+          <option value="VND">₫ VND</option>
+          <option value="ZAR">R ZAR</option>
+          <option value="BTC">₿ BTC</option>
+          <option value="LTC">Ł LTC</option>
+        </select>
+      </form>
+    </nav>
   </header>
 
-  <div class="announcement-bar">
-    <div class="marquee">
-      <span>⚠️ NEW VENDOR VERIFICATION SYSTEM IN PLACE • ALWAYS PGP ENCRYPT SENSITIVE INFORMATION • NEW MIRROR SITES AVAILABLE AT <span class="onion-link">nebula7qt2kernel.onion</span> • SYSTEM MAINTENANCE SCHEDULED FOR 08/15/2025 • NEVER SHARE YOUR PRIVATE KEYS • VERIFY ALL BITCOIN ADDRESSES BEFORE SENDING</span>
-    </div>
-  </div>
+  <!-- Main Content -->
+  <main>
+    <!-- Hero Section: Intro/Featured Banner -->
+    <section id="hero">
+      <h1>STOP PAYING FOR SERVICES LIKE</h1>
+      <p>At Nebula Market, we understand how important customer satisfaction is to those who resell our products. That's why we are committed to delivering top-quality goods. Thank you for supporting us and helping us achieve <strong>117794</strong> sales!</p>
+      <!-- Call-to-Action Buttons -->
+      <p>
+        <a href="products.html" class="btn primary">Our Products</a>
+        <a href="https://discord.gg/..." class="btn secondary" target="_blank" rel="noopener">Our Discord</a>
+      </p>
+    </section>
 
-  <main class="main-content">
-    <div class="sidebar">
-      <div class="search-container">
-        <form class="search-form" action="search.html" method="get">
-          <input type="search" name="q" placeholder="Search products..." class="search-input">
-          <button type="submit" class="search-button">Search</button>
-        </form>
+    <!-- Features Section: Why Us -->
+    <section id="features">
+      <h3 class="section-tag">FEATURES</h3>
+      <h2>WHY US?</h2>
+      <div class="feature">
+        <h4>Instant Delivery</h4>
+        <p>Instant delivery is available for the majority of our products, ensuring the best possible experience.</p>
       </div>
-      
-      <div class="categories-container">
-        <h2 class="sidebar-heading">Categories</h2>
-        <ul class="categories-list">
-          <li><a href="category.html?id=digital" class="category-link active">Digital Products</a></li>
-          <li><a href="category.html?id=services" class="category-link">Services</a></li>
-          <li><a href="category.html?id=electronics" class="category-link">Electronics</a></li>
-          <li><a href="category.html?id=security" class="category-link">Security Tools</a></li>
-          <li><a href="category.html?id=software" class="category-link">Software</a></li>
-          <li><a href="category.html?id=guides" class="category-link">Guides & Manuals</a></li>
-          <li><a href="category.html?id=other" class="category-link">Other</a></li>
-        </ul>
+      <div class="feature">
+        <h4>Reputable</h4>
+        <p>Trusted by thousands, our service consistently delivers excellence and maintains a stellar industry reputation.</p>
       </div>
-      
-      <div class="filters-container">
-        <h2 class="sidebar-heading">Filters</h2>
-        <form class="filters-form" action="index.html" method="get">
-          <div class="filter-group">
-            <h3 class="filter-title">Price (BTC)</h3>
-            <div class="price-range">
-              <input type="text" name="min" placeholder="Min" class="price-input">
-              <span class="price-separator">-</span>
-              <input type="text" name="max" placeholder="Max" class="price-input">
-            </div>
-          </div>
-          
-          <div class="filter-group">
-            <h3 class="filter-title">Vendor Rating</h3>
-            <div class="rating-options">
-              <label class="rating-label">
-                <input type="checkbox" name="rating" value="5" checked>
-                5+ Stars
-              </label>
-              <label class="rating-label">
-                <input type="checkbox" name="rating" value="4" checked>
-                4+ Stars
-              </label>
-              <label class="rating-label">
-                <input type="checkbox" name="rating" value="3">
-                3+ Stars
-              </label>
-            </div>
-          </div>
-          
-          <div class="filter-group">
-            <h3 class="filter-title">Shipping From</h3>
-            <select name="region" class="region-select">
-              <option value="">Any Region</option>
-              <option value="na">North America</option>
-              <option value="eu">Europe</option>
-              <option value="as">Asia</option>
-              <option value="oc">Oceania</option>
-              <option value="sa">South America</option>
-              <option value="af">Africa</option>
-            </select>
-          </div>
-          
-          <button type="submit" class="apply-filters-button">Apply Filters</button>
-        </form>
+      <div class="feature">
+        <h4>High Quality</h4>
+        <p>Verified quality and authenticity guaranteed, meeting the highest standards for customer satisfaction and reliability.</p>
       </div>
-    </div>
+    </section>
 
-    <div class="products-container">
-      <div class="products-header">
-        <h2 class="products-title">Digital Products</h2>
-        <div class="products-sorting">
-          <span class="sort-label">Sort by:</span>
-          <a href="?sort=newest" class="sort-option active">Newest</a>
-          <a href="?sort=popular" class="sort-option">Popular</a>
-          <a href="?sort=price-low" class="sort-option">Price: Low to High</a>
-          <a href="?sort=price-high" class="sort-option">Price: High to Low</a>
+    <!-- Products Section: Categories and Featured Offers -->
+    <section id="products">
+      <h2>OUR PRODUCTS</h2>
+      <!-- Product Categories and Offers Grid -->
+      <div class="product-grid">
+        <!-- Discord Nitro Category -->
+        <a href="#" class="product-card category-card">
+          <img src="https://imagedelivery.net/HL_Fwm__tlvUGLZF2p74xw/5ebfb079-846d-4909-3322-eb4b36fb3f00/public" alt="Discord Nitro" />
+          <span class="product-count">2 products</span>
+          <h3>Discord Nitro</h3>
+          <span class="price-range">€1.29 - €4.48</span>
+        </a>
+        <!-- Spotify Premium Lifetime Category -->
+        <a href="#" class="product-card category-card">
+          <img src="https://imagedelivery.net/HL_Fwm__tlvUGLZF2p74xw/8859630f-820d-4e3a-5738-009a91665d00/public" alt="Spotify Premium Lifetime" />
+          <span class="product-count">6 products</span>
+          <h3>Spotify Premium Lifetime</h3>
+          <span class="price-range">€0.15 - €2.98</span>
+        </a>
+        <!-- Netflix Lifetime Category -->
+        <a href="#" class="product-card category-card">
+          <img src="https://imagedelivery.net/HL_Fwm__tlvUGLZF2p74xw/dbd3ff9b-51c6-4f4f-5dc1-74ef262a3c00/public" alt="Netflix Lifetime" />
+          <span class="product-count">2 products</span>
+          <h3>Netflix Lifetime</h3>
+          <span class="price-range">€0.37 - €4.77</span>
+        </a>
+        <!-- Nitro Tokens Category -->
+        <a href="#" class="product-card category-card">
+          <img src="https://imagedelivery.net/HL_Fwm__tlvUGLZF2p74xw/b864eb88-cf6d-42ee-df4a-7fccd18a8f00/public" alt="Nitro Tokens" />
+          <span class="product-count">2 products</span>
+          <h3>Nitro Tokens</h3>
+          <span class="price-range">€0.63 - €1.39</span>
+        </a>
+        <!-- Youtube Premium Category -->
+        <a href="#" class="product-card category-card">
+          <img src="https://imagedelivery.net/HL_Fwm__tlvUGLZF2p74xw/21aac0c7-114e-4816-ac61-496b57cee000/public" alt="Youtube Premium" />
+          <span class="product-count">2 products</span>
+          <h3>Youtube Premium</h3>
+          <span class="price-range">€0.69 - €1.94</span>
+        </a>
+        <!-- Prime Video Lifetime Offer (Product) -->
+        <a href="#" class="product-card offer-card out-of-stock">
+          <span class="stock-status">Out of stock</span> Prime Video Lifetime 
+          <span class="price">€0.98</span>
+        </a>
+        <!-- Disney+ Lifetime Category -->
+        <a href="#" class="product-card category-card">
+          <img src="https://imagedelivery.net/HL_Fwm__tlvUGLZF2p74xw/481770ac-33f6-4a7f-88ea-8d5949b9b500/public" alt="Disney+ Lifetime" />
+          <span class="product-count">3 products</span>
+          <h3>Disney+ Lifetime</h3>
+          <span class="price-range">€0.10 - €0.26</span>
+        </a>
+        <!-- Dazn Lifetime Category -->
+        <a href="#" class="product-card category-card">
+          <img src="https://imagedelivery.net/HL_Fwm__tlvUGLZF2p74xw/3bd5f4bf-cda0-4e27-5846-9c1f79140400/public" alt="Dazn Lifetime" />
+          <span class="product-count">5 products</span>
+          <h3>Dazn Lifetime</h3>
+          <span class="price-range">€0.35 - €0.72</span>
+        </a>
+        <!-- HBO Max Lifetime Offer (Product) -->
+        <a href="#" class="product-card offer-card">
+          <span class="stock-status">401 in stock</span> HboMax Lifetime 
+          <span class="price">€0.24</span>
+        </a>
+        <!-- Capcut Pro Lifetime Offer (Product) -->
+        <a href="#" class="product-card offer-card">
+          <span class="stock-status">95 in stock</span> Capcut Pro Lifetime 
+          <span class="price">€0.29</span>
+        </a>
+        <!-- Burguer King Category -->
+        <a href="#" class="product-card category-card">
+          <img src="https://imagedelivery.net/HL_Fwm__tlvUGLZF2p74xw/a6ffaf20-c7c8-41bb-ef8c-2fdb29b6d800/public" alt="Burguer King" />
+          <span class="product-count">6 products</span>
+          <h3>Burguer King</h3>
+          <span class="price-range">€0.29 - €3.97</span>
+        </a>
+        <!-- Crunchyroll Lifetime Offer (Product) -->
+        <a href="#" class="product-card offer-card">
+          <span class="stock-status">932 in stock</span> Crunchyroll Lifetime 
+          <span class="price">€0.09</span>
+        </a>
+        <!-- Steam Lifetime Category -->
+        <a href="#" class="product-card category-card">
+          <img src="https://imagedelivery.net/HL_Fwm__tlvUGLZF2p74xw/81d92d82-822e-4914-e091-0f272d6ff300/public" alt="Steam Lifetime" />
+          <span class="product-count">13 products</span>
+          <h3>Steam Lifetime</h3>
+          <span class="price-range">€0.03 - €3.49</span>
+        </a>
+        <!-- Nitro Promo Code 3m Offer (Product) -->
+        <a href="#" class="product-card offer-card">
+          <span class="stock-status">27 in stock</span> Nitro Promo Code 3m 
+          <span class="price">€1.47</span>
+        </a>
+        <!-- Canva Premium Offer (Product) -->
+        <a href="#" class="product-card offer-card">
+          <span class="stock-status">1 in stock</span> Canva Premium 
+          <span class="price">€0.59</span>
+        </a>
+        <!-- PH Premium Lifetime Offer (Product) -->
+        <a href="#" class="product-card offer-card">
+          <span class="stock-status">49 in stock</span> Ph Premium Lifetime 
+          <span class="price">€0.59</span>
+        </a>
+        <!-- Fivem Ready Offer (Product) -->
+        <a href="#" class="product-card offer-card out-of-stock">
+          <span class="stock-status">Out of stock</span> Fivem Ready 
+          <span class="price">€0.35</span>
+        </a>
+        <!-- Stake Accounts lvl 1-2 Category -->
+        <a href="#" class="product-card category-card">
+          <img src="https://imagedelivery.net/HL_Fwm__tlvUGLZF2p74xw/191feeea-28b8-44cf-d245-060364e2fd00/public" alt="Stake Accounts lvl 1-2" />
+          <span class="product-count">2 products</span>
+          <h3>Stake Accounts lvl 1-2</h3>
+          <span class="price-range">€0.49 - €2.38</span>
+        </a>
+        <!-- Minecraft Lifetime Category -->
+        <a href="#" class="product-card category-card">
+          <img src="https://imagedelivery.net/HL_Fwm__tlvUGLZF2p74xw/6a4578d8-ee11-407d-c33e-f861b40c1b00/public" alt="Minecraft Lifetime" />
+          <span class="product-count">2 products</span>
+          <h3>Minecraft Lifetime</h3>
+          <span class="price-range">€1.48 - €3.98</span>
+        </a>
+        <!-- Xbox Category -->
+        <a href="#" class="product-card category-card">
+          <img src="https://imagedelivery.net/HL_Fwm__tlvUGLZF2p74xw/9dc8479d-7320-49b9-206d-2ffc889b8700/public" alt="Xbox" />
+          <span class="product-count">2 products</span>
+          <h3>Xbox</h3>
+          <span class="price-range">€0.34 - €2.49</span>
+        </a>
+        <!-- ChatGPT+ Cookies Offer (Product) -->
+        <a href="#" class="product-card offer-card">
+          <span class="stock-status">22 in stock</span> ChatGPT+ Cookies 
+          <span class="price">€0.97</span>
+        </a>
+        <!-- Telepizza Points Category -->
+        <a href="#" class="product-card category-card">
+          <img src="https://imagedelivery.net/HL_Fwm__tlvUGLZF2p74xw/6ee92c82-01c3-4a25-59e0-37c165398600/public" alt="Telepizza Points" />
+          <span class="product-count">3 products</span>
+          <h3>Telepizza Points</h3>
+          <span class="price-range">€0.55 - €1.75</span>
+        </a>
+        <!-- UFC Lifetime Offer (Product) -->
+        <a href="#" class="product-card offer-card">
+          <span class="stock-status">146 in stock</span> UFC Lifetime 
+          <span class="price">€0.19</span>
+        </a>
+        <!-- Duolingo Lifetime Offer (Product) -->
+        <a href="#" class="product-card offer-card">
+          <span class="stock-status">298 in stock</span> Duolingo Lifetime 
+          <span class="price">€0.12</span>
+        </a>
+        <!-- Paramount+ Lifetime Category -->
+        <a href="#" class="product-card category-card">
+          <img src="https://imagedelivery.net/HL_Fwm__tlvUGLZF2p74xw/b2e1d3fe-1aec-43ff-b440-dbad79bdf900/public" alt="Paramount+ Lifetime" />
+          <span class="product-count">2 products</span>
+          <h3>Paramount+ Lifetime</h3>
+          <span class="price-range">€0.14 - €0.14</span>
+        </a>
+        <!-- NBA Lifetime Offer (Product) -->
+        <a href="#" class="product-card offer-card out-of-stock">
+          <span class="stock-status">Out of stock</span> NBA Lifetime 
+          <span class="price">€0.14</span>
+        </a>
+        <!-- Express VPN Offer (Product) -->
+        <a href="#" class="product-card offer-card">
+          <span class="stock-status">98 in stock</span> Express VPN 
+          <span class="price">€0.19</span>
+        </a>
+        <!-- Wondershare Filmora Offer (Product) -->
+        <a href="#" class="product-card offer-card">
+          <span class="stock-status">159 in stock</span> Wondershare Filmora 
+          <span class="price">€0.10</span>
+        </a>
+        <!-- Ubisoft Lifetime Category -->
+        <a href="#" class="product-card category-card">
+          <img src="https://imagedelivery.net/HL_Fwm__tlvUGLZF2p74xw/84be3ff1-43bb-4f6c-8af6-9c8b0342a900/public" alt="Ubisoft Lifetime" />
+          <span class="product-count">2 products</span>
+          <h3>Ubisoft Lifetime</h3>
+          <span class="price-range">€0.11 - €2.38</span>
+        </a>
+        <!-- Vodafone TV Lifetime Offer (Product) -->
+        <a href="#" class="product-card offer-card">
+          <span class="stock-status">25 in stock</span> Vodafone TV Lifetime 
+          <span class="price">€0.39</span>
+        </a>
+        <!-- GaiaTV Lifetime Offer (Product) -->
+        <a href="#" class="product-card offer-card">
+          <span class="stock-status">22 in stock</span> GaiaTV [LIFETIME] 
+          <span class="price">€0.05</span>
+        </a>
+        <!-- TunnelBearVPN Lifetime Category -->
+        <a href="#" class="product-card category-card">
+          <img src="https://imagedelivery.net/HL_Fwm__tlvUGLZF2p74xw/0f7a1373-ce53-4d09-a35c-8d3581074a00/public" alt="TunnelBearVPN Lifetime" />
+          <span class="product-count">2 products</span>
+          <h3>TunnelBearVPN Lifetime</h3>
+          <span class="price-range">€0.05 - €0.45</span>
+        </a>
+        <!-- Nord VPN Lifetime Offer (Product) -->
+        <a href="#" class="product-card offer-card out-of-stock">
+          <span class="stock-status">Out of stock</span> Nord VPN Lifetime 
+          <span class="price">€0.97</span>
+        </a>
+        <!-- OnlyFans Lifetime Offer (Product) -->
+        <a href="#" class="product-card offer-card out-of-stock">
+          <span class="stock-status">Out of stock</span> OnlyFans Lifetime 
+          <span class="price">€0.64</span>
+        </a>
+        <!-- WWE Lifetime Offer (Product) -->
+        <a href="#" class="product-card offer-card out-of-stock">
+          <span class="stock-status">Out of stock</span> WWE Lifetime 
+          <span class="price">€0.14</span>
+        </a>
+      </div>
+    </section>
+
+    <!-- Statistics Section: Let's Talk Numbers -->
+    <section id="stats">
+      <p class="section-tagline">TRUSTED BY THOUSANDS</p>
+      <h2>LET'S TALK NUMBERS.</h2>
+      <div class="stats-grid">
+        <div class="stat">
+          <div class="stat-number">0</div>
+          <div class="stat-label">Average Feedback</div>
+        </div>
+        <div class="stat">
+          <div class="stat-number">0</div>
+          <div class="stat-label">Products Sold</div>
+        </div>
+        <div class="stat">
+          <div class="stat-number">0</div>
+          <div class="stat-label">Total Customers</div>
         </div>
       </div>
+    </section>
 
-      <div class="products-grid">
-        <div class="product-card">
-          <div class="product-rating trusted">
-            <span class="rating-icon">★</span>
-            <span class="rating-text">Trusted</span>
-          </div>
-          <div class="product-image">
-            <img src="https://images.pexels.com/photos/6457578/pexels-photo-6457578.jpeg" alt="Secure VPN Service">
-          </div>
-          <div class="product-details">
-            <h3 class="product-title">Premium VPN Service - 1 Year</h3>
-            <div class="vendor-info">
-              <span class="vendor-name">CryptoShield</span>
-              <span class="vendor-rating">4.97 ★</span>
-            </div>
-            <p class="product-description">Military-grade encryption, no logs, supports P2P, 100+ servers worldwide.</p>
-            <div class="product-footer">
-              <span class="product-price">0.012 BTC</span>
-              <a href="product.html?id=vpn-yearly" class="view-button">View</a>
-            </div>
-          </div>
-        </div>
-
-        <div class="product-card">
-          <div class="product-rating featured">
-            <span class="rating-icon">⚡</span>
-            <span class="rating-text">Featured</span>
-          </div>
-          <div class="product-image">
-            <img src="https://images.pexels.com/photos/5380642/pexels-photo-5380642.jpeg" alt="Encrypted Email Service">
-          </div>
-          <div class="product-details">
-            <h3 class="product-title">Secure Email Account - Lifetime</h3>
-            <div class="vendor-info">
-              <span class="vendor-name">PrivacyGuard</span>
-              <span class="vendor-rating">5.00 ★</span>
-            </div>
-            <p class="product-description">End-to-end encrypted email service with zero knowledge architecture.</p>
-            <div class="product-footer">
-              <span class="product-price">0.032 BTC</span>
-              <a href="product.html?id=secure-email" class="view-button">View</a>
-            </div>
-          </div>
-        </div>
-
-        <div class="product-card">
-          <div class="product-rating new">
-            <span class="rating-icon">★</span>
-            <span class="rating-text">New</span>
-          </div>
-          <div class="product-image">
-            <img src="https://images.pexels.com/photos/2582937/pexels-photo-2582937.jpeg" alt="Network Security Guide">
-          </div>
-          <div class="product-details">
-            <h3 class="product-title">Advanced Network Security Guide</h3>
-            <div class="vendor-info">
-              <span class="vendor-name">InfoSec Academy</span>
-              <span class="vendor-rating">4.85 ★</span>
-            </div>
-            <p class="product-description">Comprehensive guide on securing networks, detecting intrusions, and more.</p>
-            <div class="product-footer">
-              <span class="product-price">0.008 BTC</span>
-              <a href="product.html?id=network-security" class="view-button">View</a>
-            </div>
-          </div>
-        </div>
-
-        <div class="product-card">
-          <div class="product-image">
-            <img src="https://images.pexels.com/photos/5380651/pexels-photo-5380651.jpeg" alt="Hardware Security Module">
-          </div>
-          <div class="product-details">
-            <h3 class="product-title">Hardware Security Module - OpenPGP</h3>
-            <div class="vendor-info">
-              <span class="vendor-name">CryptoTech</span>
-              <span class="vendor-rating">4.91 ★</span>
-            </div>
-            <p class="product-description">USB hardware key for secure authentication and encryption.</p>
-            <div class="product-footer">
-              <span class="product-price">0.025 BTC</span>
-              <a href="product.html?id=hardware-security" class="view-button">View</a>
-            </div>
-          </div>
-        </div>
-
-        <div class="product-card">
-          <div class="product-image">
-            <img src="https://images.pexels.com/photos/4482900/pexels-photo-4482900.jpeg" alt="Crypto Trading Bot">
-          </div>
-          <div class="product-details">
-            <h3 class="product-title">Automated Crypto Trading Bot</h3>
-            <div class="vendor-info">
-              <span class="vendor-name">BlockchainMaster</span>
-              <span class="vendor-rating">4.78 ★</span>
-            </div>
-            <p class="product-description">Algorithmic trading software for major cryptocurrencies.</p>
-            <div class="product-footer">
-              <span class="product-price">0.045 BTC</span>
-              <a href="product.html?id=crypto-bot" class="view-button">View</a>
-            </div>
-          </div>
-        </div>
-
-        <div class="product-card">
-          <div class="product-image">
-            <img src="https://images.pexels.com/photos/7988079/pexels-photo-7988079.jpeg" alt="Anonymous Phone Number">
-          </div>
-          <div class="product-details">
-            <h3 class="product-title">Anonymous Phone Number - 3 Months</h3>
-            <div class="vendor-info">
-              <span class="vendor-name">GhostComm</span>
-              <span class="vendor-rating">4.89 ★</span>
-            </div>
-            <p class="product-description">Private phone number with unlimited texts and 500 minutes of voice.</p>
-            <div class="product-footer">
-              <span class="product-price">0.015 BTC</span>
-              <a href="product.html?id=anon-phone" class="view-button">View</a>
-            </div>
-          </div>
-        </div>
+    <!-- Customer Reviews Section -->
+    <section id="reviews">
+      <p class="section-tagline">REVIEWS FROM OUR CUSTOMERS</p>
+      <h2>REVIEWS</h2>
+      <div class="review">
+        <p>“The acc doesn’t work”</p>
+        <small>Verified purchase - May 11, 2025.</small>
       </div>
-
-      <div class="pagination">
-        <a href="#" class="pagination-link active">1</a>
-        <a href="#" class="pagination-link">2</a>
-        <a href="#" class="pagination-link">3</a>
-        <span class="pagination-ellipsis">...</span>
-        <a href="#" class="pagination-link">12</a>
-        <a href="#" class="pagination-link next-page">Next →</a>
+      <div class="review">
+        <p>“legit”</p>
+        <small>Verified purchase - May 11, 2025.</small>
       </div>
-    </div>
+      <div class="review">
+        <p>“good”</p>
+        <small>Verified purchase - May 11, 2025.</small>
+      </div>
+      <div class="review">
+        <p>“Perfeccct”</p>
+        <small>Verified purchase - May 11, 2025.</small>
+      </div>
+    </section>
   </main>
 
-  <footer class="site-footer">
-    <div class="footer-container">
-      <div class="footer-section">
-        <h3 class="footer-heading">Nebula Market</h3>
-        <p class="footer-description">Established 2023. The most secure marketplace on the dark web.</p>
-        <div class="pgp-key-container">
-          <span class="pgp-label">Market PGP:</span>
-          <pre class="pgp-key">-----BEGIN PGP PUBLIC KEY BLOCK-----
-Version: GnuPG v2.0.22
-
-mQENBGRxyz8BCACvL/7...</pre>
-          <a href="#" class="pgp-copy-link">Copy Full Key</a>
-        </div>
-      </div>
-      
-      <div class="footer-section">
-        <h3 class="footer-heading">Mirror Links</h3>
-        <ul class="mirror-links">
-          <li><a href="#" class="onion-link">nebula7qt2kernel.onion</a> <span class="status-dot online"></span></li>
-          <li><a href="#" class="onion-link">nebula24cryptomark3t.onion</a> <span class="status-dot online"></span></li>
-          <li><a href="#" class="onion-link">nebula8secure9hub.onion</a> <span class="status-dot offline"></span></li>
-          <li><a href="#" class="onion-link">nebulamarketv4.onion</a> <span class="status-dot online"></span></li>
-        </ul>
-      </div>
-      
-      <div class="footer-section">
-        <h3 class="footer-heading">Security</h3>
-        <ul class="security-links">
-          <li><a href="security.html">Security Measures</a></li>
-          <li><a href="pgp.html">PGP Tutorial</a></li>
-          <li><a href="bitcoin.html">Bitcoin Guide</a></li>
-          <li><a href="faq.html">FAQ</a></li>
-        </ul>
-      </div>
-      
-      <div class="footer-section">
-        <h3 class="footer-heading">Support</h3>
-        <ul class="support-links">
-          <li><a href="tickets.html">Support Tickets</a></li>
-          <li><a href="disputes.html">Dispute Resolution</a></li>
-          <li><a href="forum.html">Community Forum</a></li>
-        </ul>
-      </div>
-    </div>
-    
-    <div class="footer-bottom">
-      <p class="footer-notice">This is a fictional marketplace for educational purposes only. All products are fictitious.</p>
-      <p class="uptime-notice">Market Uptime: <span class="uptime">99.87%</span> | Last Updated: <span class="last-updated">08/05/2025 03:47 UTC</span></p>
-    </div>
+  <!-- Footer -->
+  <footer>
+    <p>Nebula Market &copy; Nebula Market 2025</p>
+    <p>
+      <a href="terms.html">Terms of Service</a> | 
+      <a href="https://discord.gg/..." target="_blank" rel="noopener">Discord</a> | 
+      <a href="https://t.me/..." target="_blank" rel="noopener">Telegram</a>
+    </p>
+    <h5>Log in to Your Customer Account</h5>
+    <!-- (Login form or prompt could be here if applicable) -->
   </footer>
+
+  <!-- Scripts -->
+  <script src="assets/js/main.js"></script>
 </body>
 </html>
